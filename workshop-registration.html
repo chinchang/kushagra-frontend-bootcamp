@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebDev Workshop Registration</title>
+  </head>
+  <body>
+    <header>
+      <h1>WebDev Workshop Registration</h1>
+    </header>
+    <p>
+      Welcome to the WebDev Workshop! Join us to level up your tech skills,
+      explore exciting tech topics, and connect with fellow builders.
+    </p>
+    <form action="https://formspree.io/f/xyzpyyan" method="post">
+      <p>
+        <label for="full_name">
+          Full Name: <span aria-hidden="true"><sup>*</sup></span>
+          <span aria-hidden="true">(3 - 22 characters)</span>
+        </label>
+        <input
+          type="text"
+          id="full_name"
+          name="full_name"
+          required
+          pattern="^[a-zA-Z\s]{3,22}$"
+          minlength="3"
+          maxlength="22"
+          aria-label="Enter Full Name (3 to 22 characters)"
+        />
+      </p>
+      <p>
+        <label for="user_email"
+          >Email: <span aria-hidden="true"><sup>*</sup></span></label
+        >
+        <input
+          type="email"
+          id="user_email"
+          name="user_email"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          required
+          aria-label="Enter a valid email address"
+        />
+      </p>
+      <fieldset>
+        <legend>Topic of interest:</legend>
+        <p>
+          <input
+            type="checkbox"
+            name="tech_interest"
+            id="web_dev"
+            value="web_dev"
+          />
+          <label for="web_dev">Web Development</label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="tech_interest"
+            id="artificial_intelligence"
+            value="ai"
+          />
+          <label for="artificial_intelligence">
+            <abbr title="Artificial Intelligence">AI</abbr>
+          </label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="tech_interest"
+            id="ui_ux"
+            value="ui/ux"
+          />
+          <label for="ui_ux">
+            <abbr title="User Interface/User Experience">UI/UX</abbr>
+          </label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="tech_interest"
+            id="devops"
+            value="devops"
+          />
+          <label for="devops">
+            <abbr title="Development Operations">DevOps</abbr>
+          </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Attendance type:</legend>
+        <p>
+          <input
+            type="radio"
+            name="attendance_type"
+            id="in_person"
+            value="in_person"
+          />
+          <label for="in_person">In-person</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            name="attendance_type"
+            id="virtual"
+            value="virtual"
+          />
+          <label for="virtual">Virtual</label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Experience level:</legend>
+        <p>
+          <input
+            type="radio"
+            name="experience_level"
+            id="beginner"
+            value="beginner"
+          />
+          <label for="beginner">Beginner</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            name="experience_level"
+            id="intermediate"
+            value="intermediate"
+          />
+          <label for="intermediate">Intermediate</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            name="experience_level"
+            id="expert"
+            value="expert"
+          />
+          <label for="expert">Expert</label>
+        </p>
+      </fieldset>
+      <p>
+        <label for="user_city">Which city are you coming from?</label>
+        <select name="user_city" id="user_city">
+          <option value="">Please choose a city from list</option>
+          <option value="pune">Pune</option>
+          <option value="gurgaon">Gurgaon</option>
+          <option value="delhi">Delhi</option>
+          <option value="noida">Noida</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="chennai">Chennai</option>
+          <option value="bangalore">Bangalore</option>
+          <option value="chandigarh">Chandigarh</option>
+          <option value="coimbatore">Coimbatore</option>
+          <option value="jaipur">Jaipur</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="other">Other (city not listed)</option>
+        </select>
+      </p>
+      <fieldset>
+        <legend>
+          Workshop Date and Time: <span aria-hidden="true"><sup>*</sup></span>
+        </legend>
+        <p>
+          <label for="workshop-date">Workshop Date:</label>
+          <input
+            type="date"
+            id="workshop-date"
+            name="workshop-date"
+            required
+            min="2025-07-15"
+            max="2025-11-15"
+            aria-describedby="date-help"
+          />
+          <span id="date-help"
+            >Available dates: July 15 - November 15, 2025</span
+          >
+        </p>
+        <p>
+          <label for="workshop-time">Workshop Time:</label>
+          <input
+            type="time"
+            id="workshop-time"
+            name="workshop-time"
+            required
+            min="09:00"
+            max="21:00"
+            aria-describedby="time-help"
+          />
+          <span id="time-help">Available times: 9:00 AM - 9:00 PM</span>
+        </p>
+      </fieldset>
+      <p>
+        <label for="additional-comments"
+          >Anything you want to share with us:</label
+        >
+        <textarea
+          id="additional-comments"
+          name="additional-comments"
+          rows="5"
+          cols="50"
+          aria-label="Additional comments or special requirements"
+        ></textarea>
+      </p>
+      <p>
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+      </p>
+    </form>
+  </body>
+</html>
