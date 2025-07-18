@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>WebDev Workshop Registration</title>
+        </head>
+        <body>
+            <h1>This workshop will make you a master of Web Development.</h1>
+
+            <form action="https://formspree.io/f/myzpzjje" method="POST">
+                <fieldset>
+                    <legend><strong>Sign Up Form</strong></legend>
+                    <p>
+                        <label>Enter Full Name: <sup>(required) </sup><input type="text" id="name_field" name="full_name" required></label>                        
+                    </p>
+                    <p>
+                        <label>Enter Email: <sup>(required) </sup><input type="email" id="email" name="email" required></label>                        
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend><strong>Attendance type:</strong></legend>
+                            <label><input type="radio" name="attendance" value="In-person"> In-person</label>
+                            <label><input type="radio" name="attendance" value="Virtual"> Virtual</label> 
+                        </fieldset>                     
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend><strong>Select topics of interest:</strong></legend>
+                            <label><input type="checkbox" name="interest[]" value="Web dev"> Web dev</label>
+                            <label><input type="checkbox" name="interest[]" value="AI"> AI</label>
+                            <label><input type="checkbox" name="interest[]" value="UI/UX"> UI/UX</label>
+                            <label><input type="checkbox" name="interest[]" value="DevOps"> DevOps</label>
+                        </fieldset>                                         
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend><strong>Experience level:</strong></legend>
+                            <label><input type="radio" name="experience" value="Beginner"> Beginner</label>
+                            <label><input type="radio" name="experience" value="Intermediate"> Intermediate</label>
+                            <label><input type="radio" name="experience" value="Expert"> Expert</label> 
+                        </fieldset>                        
+                                              
+                    </p>
+                    <p>
+                        <label>Anything you want to share with us? <br>
+                            <textarea id="share" name="share" rows="4"></textarea></label>                        
+                    </p>
+                    <p>                         
+                        <label>Preferred workshop day: <sup>(required) </sup><input type="datetime-local" id="date_time" name="date_time" min="2025-07-18T10:00" required></label>                       
+                    </p>
+                    <p>
+                        <label>City coming from?
+                            <select id="city" name="city">
+                                <option value="" disabled selected>Choose a location</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="SF">SF</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Bali">Bali</option>
+                                <option value="Chiang_Mai">Chiang Mai</option>
+                                <option value="Shenzhen">Shenzhen</option>
+                                <option value="Anchorage">Anchorage</option>
+                                <option value="Frankfurt">Frankfurt</option>
+                                <option value="Dubai">Dubai</option>
+                            </select>
+                        </label>
+                    </p>
+                    <button type="submit" aria-label="Submit Workshop Registration Form">Submit the form for Workshop</button><br>
+                    <button type="reset" aria-label="Reset the Form">Reset the form</button>                     
+                </fieldset>
+            </form>            
+        </body>
+    </html>
