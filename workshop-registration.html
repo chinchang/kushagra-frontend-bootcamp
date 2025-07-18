@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WebDev Workshop Registration</title>
+        </head>
+    <body>
+        <h1>WebDev Workshop Registration</h1>
+        <p>Join our immersive workshop to sharpen your modern web development skills.<br> Open to all, from beginners to experts!</p>
+        <form action="https://formspree.io/f/mjkokprj" method="POST" aria-label="WebDev Workshop Registration Form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name</label><br>
+                <input type="text" id="full-name" name="fullName" autocomplete="name" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" autocomplete="email" required><br><br>
+                <label for="city">City coming from?</label><br>
+                <select id="city" name="city" required>
+                    <option value="">--Select City--</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Lucknow">Lucknow</option>
+                </select><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Workshop Preferences</legend>
+                <p>Attendance type:</p>
+                <input type="radio" id="in-person" name="attendanceType" value="In-person" required>
+                <label for="in-person">In-person</label>
+                <input type="radio" id="virtual" name="attendanceType" value="Virtual" required>
+                <label for="virtual">Virtual</label><br><br>
+                <label for="topics">Select topics of interest:</label><br>
+                <input type="checkbox" id="webdev" name="topics" value="Web Dev">
+                <label for="webdev">Web Dev</label>
+                <input type="checkbox" id="ai" name="topics" value="AI">
+                <label for="ai">AI</label>
+                <input type="checkbox" id="uiux" name="topics" value="UI/UX">
+                <label for="uiux">UI/UX</label>
+                <input type="checkbox" id="devops" name="topics" value="Devops">
+                <label for="devops">Devops</label><br><br>
+                <label for="experience-level">Experience level:</label><br>
+                <select id="experience-level" name="experienceLevel" required>
+                    <option value="">--Select Experience Level--</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select><br><br>
+                <label for="comment">Anything you want to share with us?</label><br>
+                <textarea id="comment" name="comments" rows="3" aria-label="Additional comments"></textarea><br><br>
+                <label for="workshop-day">Preferred workshop day (Date &amp; time):</label><br>
+                <input type="datetime-local" id="workshop-day" name="preferredDay" required><br><br>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
