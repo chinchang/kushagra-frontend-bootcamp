@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Workshop Registration</title>
+</head>
+
+
+<body>
+    <h1>WebDev Workshop Registration</h1>
+    <p>Join our intensive 3-day workshop to master modern web development technologies. Whether you're a beginner
+        looking to
+        start your coding journey or an experienced developer wanting to sharpen your skills, this workshop offers
+        hands-on
+        training with industry experts. Limited seats available!</p>
+
+    <form action="https://formspree.io/f/xblklkza" method="POST" name="WebDev Workshop Registration">
+        <p>
+            <label>Enter full name<span><sup>*</sup></span>:
+                <input type="text" name="name" pattern="[A-Za-z\s]+" required title="Only letters allowed">
+            </label>
+        </p>
+        <p>
+            <label for=" user-email">Enter email<span><sup>*</sup></span>:</label>
+            <input id="user-email" type="email" name="email">
+        </p>
+
+        <fieldset role="radiogroup">
+            <legend required>Attendence type<span><sup>*</sup></span></legend>
+            <p>
+                <input type="radio" name="attendance-type" value="in-person" id="type-in-person">
+                <label for="type-in-person">In-person</label>
+            </p>
+            <p>
+                <input type="radio" name="attendance-type" value="virtual" id="type-virtual">
+                <label for="type-virtual">Virtual</label>
+            </p>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>
+                Select topics of interest:
+            </legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="webdev">
+                    webdev
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="ai">
+                    AI
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="ui_ux">UI/UX</label>
+
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="devops">
+                    Devops</label>
+            </p>
+        </fieldset>
+
+
+        <p>Proficiency level<span><sup>*</sup></span>:</p>
+        <select name="experience_level">
+
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+        </select>
+
+
+        <p>Anything you want to share with us?</p>
+        <textarea name="extra_info" rows="4"></textarea>
+
+
+        <p>Preferred workshop day and time :</p>
+        <span>Available dates: 18th July 2025 to 18th Dec 2025</span>
+        <p>
+            <label>Date:
+                <input type="date" name="Preferred_date" min="2025-07-18" max="2025-12-18"
+                    title="Available dates: 18th July 2025 to 18th Dec 2025">
+            </label>
+        </p>
+
+        <span>Available time: 9AM to 2PM</span>
+        <p>
+            <label>Time:
+                <input type="time" min="09:00" max="14:00" title="Available time: 9AM to 2PM">
+            </label>
+        </p>
+
+        <p>City you belong to<span><sup>*</sup></span>:</p>
+        <p>
+            <select name="user_city">
+                <option value="gurugram">Gurugram</option>
+                <option value="delhi">Delhi</option>
+                <option value="nagpur">Nagpur</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="goa">Goa</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="noida">Noida</option>
+                <option value="patna">Patna</option>
+            </select>
+        </p>
+
+        <button type="reset">reset</button>
+        <button>submit</button>
+
+    </form>
+</body>
+
+</html>
