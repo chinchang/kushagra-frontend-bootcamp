@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>WebDev Workshop Registration</title>
+    </head>
+    <body>
+        <h1 id="main-title">WebDev Workshop Registration</h1>
+        <p id="desc1">
+        Join our immersive workshop to sharpen your modern web development skills.<br>
+        Open to all, from beginners to experts—select sessions that match your passion and goals!
+        </p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name</label><br>
+                <input type="text" id="full-name" name="fullName" required aria-label="Full Name"><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required aria-label="Email"><br><br>
+                <label for="city">City coming from?</label><br>
+                <select id="city" name="city" required aria-label="City coming from">
+                    <option value="">--Select City--</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Lucknow">Lucknow</option>
+                </select><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Workshop Preferences</legend>
+                <span>Attendance type:</span><br>
+                <input type="radio" id="in-person" name="attendanceType" value="In-person" required aria-label="In-person attendance">
+                <label for="in-person">In-person</label>
+                <input type="radio" id="virtual" name="attendanceType" value="Virtual" required aria-label="Virtual attendance">
+                <label for="virtual">Virtual</label><br><br> 
+                <span>Select topics of interest:</span><br>
+                <input type="checkbox" id="webdev" name="topics" value="Web Dev" aria-label="Web Development">
+                <label for="webdev">Web Dev</label>
+                <input type="checkbox" id="ai" name="topics" value="AI" aria-label="Artificial Intelligence">
+                <label for="ai">AI</label>
+                <input type="checkbox" id="uiux" name="topics" value="UI/UX" aria-label="User Interface User Experience">
+                <label for="uiux">UI/UX</label>
+                <input type="checkbox" id="devops" name="topics" value="Devops" aria-label="DevOps">
+                <label for="devops">Devops</label><br><br>
+                <label for="experience-level">Experience level:</label><br>
+                <select  id="experience-level" name="experienceLevel"required aria-label="Experience level">
+                    <option value="">--Select Experience Level--</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select><br><br>
+                <label for="comment">Anything you want to share with us?</label><br>
+                <textarea  id="comment" name="comments" rows="3" aria-label="Additional comments"></textarea><br><br>
+                <label for="workshop-day">Preferred workshop day (Date & time):</label><br>
+                <input type="datetime-local" id="workshop-day" name="preferredDay" required aria-label="Preferred workshop day"><br><br>
+            </fieldset> 
+            <button type="submit" aria-label="Submit form">Submit</button>
+            <button type="reset" aria-label="Reset form">Reset</button>
+        </form>
+    </body>
+</html>
+  
