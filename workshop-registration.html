@@ -9,67 +9,57 @@
             <h1>WebDev Workshop Registration</h1>
             <h2>This workshop will make you a master of Web Development.</h2>
 
-            <form action="https://formspree.io/f/myzpzjje" method="POST">
+            <form action="https://formspree.io/f/xgvzazpl" method="POST">
+                <p>
+                    <label>Enter Full Name: <sup>(required) </sup><input type="text" name="full_name" required></label>                        
+                </p>
+                <p>
+                    <label>Enter Email: <sup>(required) </sup><input type="email" name="email" required></label>                        
+                </p>
                 <fieldset>
-                    <legend><strong>Sign Up Form</strong></legend>
-                    <p>
-                        <label>Enter Full Name: <sup>(required) </sup><input type="text" id="name_field" name="full_name" required aria-hidden="true"></label>                        
-                    </p>
-                    <p>
-                        <label>Enter Email: <sup>(required) </sup><input type="email" id="email" name="email" required aria-hidden="true"></label>                        
-                    </p>
-                    <p>
-                        <fieldset>
-                            <legend><strong>Attendance type:</strong></legend>
-                            <label><input type="radio" name="attendance" value="In-person"> In-person</label>
-                            <label><input type="radio" name="attendance" value="Virtual"> Virtual</label> 
-                        </fieldset>                     
-                    </p>
-                    <p>
-                        <fieldset>
-                            <legend><strong>Select topics of interest:</strong></legend>
-                            <label><input type="checkbox" name="interest[]" value="Web dev" aria-hidden="true"> <abbr title="(Web Development)">Web dev</abbr></label>
-                            <label><input type="checkbox" name="interest[]" value="AI" aria-hidden="true"><abbr title="(Artificial Intelligence)">AI</abbr></label>
-                            <label><input type="checkbox" name="interest[]" value="UI / UX" aria-hidden="true"><abbr title="(User Interface / User Experience)">UI / UX</abbr></label>
-                            <label><input type="checkbox" name="interest[]" value="DevOps" aria-hidden="true"><abbr title="(Developer Operations)">DevOps</abbr></label>
-                        </fieldset>                                         
-                    </p>
-                    <p>
-                        <fieldset>
-                            <legend><strong>Experience level:</strong></legend>
-                            <label><input type="radio" name="experience" value="Beginner"> Beginner</label>
-                            <label><input type="radio" name="experience" value="Intermediate"> Intermediate</label>
-                            <label><input type="radio" name="experience" value="Expert"> Expert</label> 
-                        </fieldset>                        
-                                              
-                    </p>
-                    <p>
-                        <label>Anything you want to share with us? <br>
-                            <textarea id="share" name="share" rows="4"></textarea></label>                        
-                    </p>
-                    <p>                         
-                        <label>Preferred workshop date and time (Choose from 10 AM till 6 PM starting 18<sup>th</sup> until 28<sup>th</sup> of July 2025): <sup>(required) </sup><input type="datetime-local" id="date_time" name="date_time" min="2025-07-18T10:00" max="2025-07-28T18:00" required aria-hidden="true"></label>                       
-                    </p>
-                    <p>
-                        <label>Which city are you coming from?
-                            <select id="city" name="city">
-                                <option value="" disabled selected>Choose a location</option>
-                                <option value="Bengaluru">Bengaluru</option>
-                                <option value="Mumbai">Mumbai</option>
-                                <option value="SF">SF</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Bali">Bali</option>
-                                <option value="Chiang_Mai">Chiang Mai</option>
-                                <option value="Shenzhen">Shenzhen</option>
-                                <option value="Anchorage">Anchorage</option>
-                                <option value="Frankfurt">Frankfurt</option>
-                                <option value="Dubai">Dubai</option>
-                            </select>
-                        </label>
-                    </p>
-                    <button type="submit" aria-label="Submit Workshop Registration Form">Submit the form for Workshop</button><br>
-                    <button type="reset" aria-label="Reset the Form">Reset the form</button>                     
-                </fieldset>
+                    <legend><strong>Attendance type:</strong></legend>
+                    <label><input type="radio" name="attendance" value="in_person"> In-person</label>
+                    <label><input type="radio" name="attendance" value="virtual"> Virtual</label> 
+                </fieldset>                     
+                <fieldset>
+                    <legend><strong>Select topics of interest:</strong></legend>
+                    <label><input type="checkbox" name="interests[]" value="web_dev" aria-hidden="true"> <abbr title="(Web Development)">Web dev</abbr></label>
+                    <label><input type="checkbox" name="interests[]" value="ai" aria-hidden="true"><abbr title="(Artificial Intelligence)">AI</abbr></label>
+                    <label><input type="checkbox" name="interests[]" value="ui/ux" aria-hidden="true"><abbr title="(User Interface / User Experience)">UI / UX</abbr></label>
+                    <label><input type="checkbox" name="interests[]" value="devOps" aria-hidden="true"><abbr title="(Developer Operations)">DevOps</abbr></label>
+                </fieldset>                                         
+                <fieldset>
+                    <legend><strong>Experience level:</strong></legend>
+                    <label><input type="radio" name="experience" value="beginner"> Beginner</label>
+                    <label><input type="radio" name="experience" value="intermediate"> Intermediate</label>
+                    <label><input type="radio" name="experience" value="expert"> Expert</label> 
+                </fieldset>                        
+                <p>
+                    <label>Anything you want to share with us? <br>
+                        <textarea name="share" rows="4"></textarea></label>                        
+                </p>
+                <p>                         
+                    <label>Preferred workshop date and time (Choose from 10 AM till 6 PM starting 18<sup>th</sup> until 28<sup>th</sup> of July 2025): <sup>(required) </sup><input type="datetime-local" id="date_time" name="date_time" min="2025-07-18T10:00" max="2025-07-28T18:00" required aria-hidden="true"></label>                       
+                </p>
+                <p>
+                    <label>Which city are you coming from?
+                        <select name="city">
+                            <option value="" disabled selected>Choose a location</option>
+                            <option value="bengaluru">Bengaluru</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="sf">SF</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="bali">Bali</option>
+                            <option value="chiang_Mai">Chiang Mai</option>
+                            <option value="shenzhen">Shenzhen</option>
+                            <option value="anchorage">Anchorage</option>
+                            <option value="frankfurt">Frankfurt</option>
+                            <option value="dubai">Dubai</option>
+                        </select>
+                    </label>
+                </p>
+                <button type="submit" aria-label="Submit Workshop Registration Form">Submit the form for Workshop</button><br>
+                <button type="reset" aria-label="Reset the Form">Reset the form</button>
             </form>            
         </body>
     </html>
