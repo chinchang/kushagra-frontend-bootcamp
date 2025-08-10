@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Workshop Registration</title>
+</head>
+
+
+<body>
+    <h1>WebDev Workshop Registration</h1>
+    <p>Join our intensive 3-day workshop to master modern web development technologies. Whether you're a beginner
+        looking to
+        start your coding journey or an experienced developer wanting to sharpen your skills, this workshop offers
+        hands-on
+        training with industry experts. Limited seats available!</p>
+
+    <form action="https://kushagra.dev" method="POST" name="WebDev Workshop Registration">
+        <p>
+            <label>Enter full name<span><sup>*</sup></span>:
+                <input type="text" name="name" pattern="[A-Za-z\s]+" required title="Only letters allowed">
+            </label>
+        </p>
+        <p>
+            <label for=" user-email">Enter email<span><sup>*</sup></span>:</label>
+            <input id="user-email" type="email" name="email">
+        </p>
+
+        <fieldset>
+            <legend required>Attendence type<span><sup>*</sup></span></legend>
+            <p>
+                <input type="radio" name="attendance-type" value="in-person" id="attendance-in-person">
+                <label for="attendance-in-person">In-person</label>
+            </p>
+            <p>
+                <input type="radio" name="attendance-type" value="virtual" id="attendance-virtual">
+                <label for="attendance-virtual">Virtual</label>
+            </p>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>
+                Select topics of interest:
+            </legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="interests" value="webdev">
+                    webdev
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="interests" value="ai">
+                    AI
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="interests" value="ui_ux">UI/UX</label>
+
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="interests" value="devops">
+                    Devops</label>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend required>Proficiency level<span><sup>*</sup></span></legend>
+            <p>
+                <input type="radio" name="proficiency_level" value="beginner" id="beginner">
+                <label for="beginner">Begginer</label>
+            </p>
+            <p>
+                <input type="radio" name="proficiency_level" value="intermediate" id="intermediate">
+                <label for="intermediate">Intermediate</label>
+            </p>
+            <p>
+                <input type="radio" name="proficiency_level" value="expert" id="expert">
+                <label for="expert">Expert</label>
+            </p>
+
+        </fieldset>
+
+
+
+        <label for="extra_info">Anything you want to share with us?</label>
+        <textarea id="extra_info" name="extra_info" rows="4"></textarea>
+
+
+        <p>Preferred workshop day and time :</p>
+        <span>Available dates: 18th July 2025 to 18th Dec 2025</span>
+        <p>
+            <label>Date:
+                <input type="date" name="Preferred_date" min="2025-07-18" max="2025-12-18"
+                    title="Available dates: 18th July 2025 to 18th Dec 2025">
+            </label>
+        </p>
+
+        <span>Available time: 9AM to 2PM</span>
+        <p>
+            <label>Time:
+                <input type="time" min="09:00" max="14:00" title="Available time: 9AM to 2PM">
+            </label>
+        </p>
+
+        <label for="cities">City you belong to<span><sup>*</sup></span>:</label>
+        <p>
+            <select id="cities" name="user_city">
+                <option value="gurugram">Gurugram</option>
+                <option value="delhi">Delhi</option>
+                <option value="nagpur">Nagpur</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="goa">Goa</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="noida">Noida</option>
+                <option value="patna">Patna</option>
+            </select>
+        </p>
+
+        <button type="reset">Reset</button>
+        <button>Submit</button>
+
+    </form>
+</body>
+
+</html>
