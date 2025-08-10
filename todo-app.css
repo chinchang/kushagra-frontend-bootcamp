@@ -1,5 +1,35 @@
+:root {
+    --task-item-border-color: black;
+    --hover-bg-color: #f5f5dd;
+}
+
 form {
     display: flex;
     justify-content: center;
     gap: 10px;
+} 
+
+.completed {
+    text-decoration: line-through;
 }
+
+.task-item {
+    border-radius: 7px;
+    border: 1px solid var(--task-item-border-color);
+    padding: 15px;
+    margin: 10px;
+}
+
+.task-item:hover, .task-item:focus-within {
+    background-color: var(--hover-bg-color);
+}
+
+.remove {
+    margin-inline-start: 5px;
+    visibility: hidden;
+}
+
+.task-item:hover .remove, .task-item:focus-within .remove{
+    visibility: visible;
+}
+

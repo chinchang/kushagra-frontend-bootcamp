@@ -4,37 +4,18 @@
         <meta charset="UTF-8">
         <title>To Do App</title>
         <link rel="stylesheet" href="todo-app.css">
+        <script defer src="todo-app.js"></script>
     </head>
     <body>
         <header>
             <h1>To Do App</h1>
         </header>
         <form>
-            <input type="text" id="addTask">
-            <button>Add Task</button>
+            <input type="text" id="js-task-title">
+            <button id="js-add-task-btn">Add Task</button>
         </form>
-        <ol>
-            <li>
-                <label> 
-                    <input type="checkbox" id="task-1">
-                    Do Assignment
-                </label>
-                <button type="button">Remove</button>
-            </li>
-            <li>
-                <label>
-                    <input type="checkbox" id="task-2">
-                    Practice Flexbox
-                </label>
-                <button type="button">Remove</button>
-            </li>
-            <li>
-                <label>
-                    <input type="checkbox" id="task-3">
-                    Update Master Branch
-                </label>
-                <button type="button">Remove</button>
-            </li>
+        <ol id="js-task-list">
+            
         </ol>
     </body>
 </html>
