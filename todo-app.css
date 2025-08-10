@@ -10,7 +10,6 @@
 }
 
 .form-container {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +35,6 @@
 
 .todo-list {
   min-inline-size: 40vw;
-  /* border: 1px solid green; */
   padding: 0;
 }
 

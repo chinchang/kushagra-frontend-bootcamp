@@ -1,46 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todo-app.css" />
+    <title>Todo App</title>
+    <script src="todo-app.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="todo-app.css" />
-  <title>Todo App</title>
-  <script src="todo-app.js" defer></script>
-</head>
+  <body>
+    <header>
+      <h1 class="heading-1">Todo App</h1>
+    </header>
+    <form class="form-container">
+      <div class="add_task">
+        <input type="text" placeholder="Add your task..." class="todo-input" />
+        <button class="js-add-task clickable btns">Add task</button>
+      </div>
 
-<body>
-  <header>
-    <h1 class="heading-1">Todo App</h1>
-  </header>
-  <form class="form-container">
-    <div class="add_task">
-      <input type="text" class="todo-input" />
-      <button class="js-add-task clickable btns">Add task</button>
-    </div>
-
-    <ol class="todo-list">
-      <!-- <li class="todo-list-item">
-        <label class="clickable"><input name="do_assignment" value="do_assignment" type="checkbox" />
-          Do assignment</label>
-
-        <button class="btn-remove clickable" type="button">Remove</button>
-      </li>
-
-      <li class="todo-list-item">
-        <label><input name="practice_flexbox" value="practice_flexbox" type="checkbox" />Practice Flexbox</label>
-
-        <button type="button">Remove</button>
-      </li>
-
-      <li class="todo-list-item">
-        <label><input name="update_master_branch" value="update_master_branch" type="checkbox" />
-          Update Master Branch</label>
-
-        <button type="button">Remove</button>
-      </li> -->
-    </ol>
-  </form>
-</body>
-
+      <ol class="todo-list"></ol>
+    </form>
+  </body>
 </html>

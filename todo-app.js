@@ -2,23 +2,18 @@ const btnAddTask = document.querySelector(".js-add-task");
 const inputEl = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo-list");
 
-let todo_arr = [
-  //   { title: "abc", isCompleted: true },
-  //   { title: "xyz", isCompleted: true },
-  //   { title: "ijk", isCompleted: true },
-];
+let todo_arr = [];
 
 const updateDom = () => {
-  console.log("first");
   todoList.innerHTML = "";
   if (todo_arr.length === 0) {
-    console.log("todoList.innerHTML", todoList.innerHTML);
     const div = document.createElement("div");
     div.textContent = "PLEASE ADD TASKS!";
     div.className = "add-tasks";
 
     todoList.append(div);
   }
+
   todo_arr.map((todo_item) => {
     const li = document.createElement("li");
     li.className = "todo-list-item";
@@ -47,7 +42,6 @@ const updateDom = () => {
         } else {
           label.className = "";
         }
-        console.log("todoToUpdate", todoToUpdate);
       }
       updateDom();
     });
@@ -60,8 +54,6 @@ const updateDom = () => {
     btnRemove.addEventListener("click", () => {
       todo_arr = todo_arr.filter((todo) => todo.title !== todo_item.title);
 
-      console.log(todo_arr);
-
       updateDom();
     });
 
@@ -69,7 +61,6 @@ const updateDom = () => {
     li.append(btnRemove);
     label.prepend(input);
     todoList.append(li);
-    console.log(li);
   });
 };
 
@@ -83,7 +74,6 @@ inputEl.addEventListener("input", () => {
 
 addNewTodo = (e) => {
   e.preventDefault();
-  console.log("llllll");
 
   let newTodo = {
     title: inputEl.value,
