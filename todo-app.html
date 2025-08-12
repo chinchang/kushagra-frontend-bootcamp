@@ -3,31 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The best TODO app</title>
+    <title>The first ever TODO app</title>
 
     <link rel="stylesheet" href="todo-app.css" />
-
-    <script defer src="todo-app.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Best TODO App</h1>
-    </header>
+    <header> <h1>First TODO App</h1> </header>
 
-    <form>
+    <form class="form1">
       <input type="text" class="input" id="js-task-title" />
-      <button id="js-add-task-btn">Add task</button>
+      <button type="submit" id="js-add-task-btn">Add task</button>
     </form>
 
-    <ol id="js-task-list">
-      <!-- <li>
-        <label>
-          <input type="checkbox" />
-          Learn flexbox
-        </label>
-
-        <button type="button">Remove</button>
-      </li> -->
+    <ol class="task-list" id="js-task-list">
+      
     </ol>
+    <script src="todo-app.js" async></script>
   </body>
 </html>
