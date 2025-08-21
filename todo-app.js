@@ -2,6 +2,7 @@
 let inputEl = document.querySelector("#js-task-title");
 let addTaskButton = document.querySelector("#js-add-task-btn");
 let listEl = document.querySelector("#js-task-list");
+let todoTemplateEl = document.querySelector("#js-todo-template");
 
 let tasks = [];
 
@@ -47,27 +48,18 @@ listEl.addEventListener("change", function (event) {
 function updateDom() {
   listEl.innerHTML = "";
   for (let i = 0; i < tasks.length; i++) {
-    const li = document.createElement("li");
-    li.classList.add("js-task-list-item");
+    const clone = todoTemplateEl.content.cloneNode(true);
+    const li = clone.querySelector(".js-task-list-item");
     li.dataset.index = i;
 
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.checked = tasks[i].isCompleted;
-    input.id = `task-${i}`;
-    input.classList.add("js-task-checkbox");
+    const checkbox = clone.querySelector(".js-task-checkbox");
+    checkbox.id = `task-${i}`;
+    checkbox.checked = tasks[i].isCompleted;
 
-    const label = document.createElement("label");
+    const label = clone.querySelector(".js-task-label");
+    label.htmlFor = checkbox.id;
     label.textContent = tasks[i].title;
-    label.classList.add("js-task-label");
-    label.prepend(input);
-    label.htmlFor = input.id;
 
-    const button = document.createElement("button");
-    button.textContent = "Remove";
-    button.classList.add("js-remove-btn");
-
-    li.append(input, label, button);
     listEl.append(li);
   }
 }

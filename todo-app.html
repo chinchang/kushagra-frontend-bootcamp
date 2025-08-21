@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>The first ever TODO app</title>
-    
+
     <link rel="stylesheet" href="todo-app.css" />
   </head>
   <body>
@@ -17,6 +17,14 @@
     </form>
 
     <ol class="task-list" id="js-task-list"> </ol>
+
+    <template id="js-todo-template">
+      <li class="js-task-list-item">
+        <input type="checkbox" class="js-task-checkbox" />
+        <label class="js-task-label"></label>        
+        <button class="js-remove-btn">Remove</button>
+      </li>
+    </template>
 
     <script src="todo-app.js" async> </script>
   </body>
