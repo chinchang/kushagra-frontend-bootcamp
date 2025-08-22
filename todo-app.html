@@ -19,15 +19,14 @@
       <button id="js-add-task-btn">Add task</button>
     </form>
 
-    <ol id="js-task-list">
-      <!-- <li>
-        <label>
-          <input type="checkbox" />
-          Learn flexbox
-        </label>
+    <ol id="js-task-list"></ol>
 
-        <button type="button">Remove</button>
-      </li> -->
-    </ol>
+    <template id="js-todo-template">
+      <li class="js-task-list-item">
+        <input type="checkbox" class="js-task-checkbox" />
+        <label class="js-task-label"></label>
+        <button class="js-remove-btn">Remove</button>
+      </li>
+    </template>
   </body>
 </html>
