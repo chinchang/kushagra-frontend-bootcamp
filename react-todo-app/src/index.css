@@ -1,3 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(220, 248, 220);
+  --border: #1f5319 1.2px solid;
+}
+
 body {
-  background-color: beige;
+  background: var(--background);
+  margin: 0;
+  padding: 1rem;
+  block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-block-start: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.task-list {
+  padding: 4rem;
+  padding-block-start: 0;
+}
+
+.js-task-list-item {
+  border: var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.js-remove-btn {
+  display: none;
+}
+
+.js-task-list-item:hover .js-remove-btn,
+.js-task-list-item:focus-within .js-remove-btn {
+  display: inline;
+}
+
+.js-task-label{
+  flex-grow: 1;
+}
+
+.js-task-checkbox:checked + .js-task-title {
+  text-decoration: line-through;
 }
