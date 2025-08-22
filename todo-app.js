@@ -1,6 +1,7 @@
 const btnAddTask = document.querySelector(".js-add-task");
 const inputEl = document.querySelector(".todo-input");
 const todoList = document.querySelector(".todo-list");
+const todoTemplate = document.querySelector(".js-todo-template");
 
 let todo_arr = [];
 
@@ -14,52 +15,40 @@ const updateDom = () => {
     todoList.append(div);
   }
 
-  todo_arr.map((todo_item) => {
-    const li = document.createElement("li");
-    li.className = "todo-list-item";
+  todo_arr.forEach((todo_item) => {
+    const li = todoTemplate.content.cloneNode(true);
 
-    const label = document.createElement("label");
-    label.textContent = todo_item.title;
+    const checkbox = li.querySelector("input[type='checkbox']");
+    const todoText = li.querySelector(".todo-text");
+    const removeBtn = li.querySelector(".btn-remove");
 
-    label.className = todo_item.isCompleted
-      ? "clickable strikethrough"
-      : "clickable";
+    checkbox.checked = todo_item.isCompleted;
+    todoText.textContent = todo_item.title;
 
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.name = todo_item.title;
-    input.value = input.name;
-    input.checked = todo_item.isCompleted;
+    if (todo_item.isCompleted) {
+      todoText.classList.add("strikethrough");
+    }
 
-    input.addEventListener("change", (e) => {
+    checkbox.addEventListener("change", (e) => {
       if (e.target.type === "checkbox") {
         const todoToUpdate = todo_arr.find(
           (item) => item.title === todo_item.title
         );
         todoToUpdate.isCompleted = !todoToUpdate.isCompleted;
         if (todoToUpdate.isCompleted) {
-          label.className = "strikethrough";
+          todoText.classList.add("strikethrough");
         } else {
-          label.className = "";
+          todoText.classList.remove("strikethrough");
         }
       }
-      updateDom();
     });
 
-    var btnRemove = document.createElement("button");
-    btnRemove.className = "btn-remove clickable btns";
-    btnRemove.type = "button";
-    btnRemove.textContent = "Remove";
-
-    btnRemove.addEventListener("click", () => {
+    removeBtn.addEventListener("click", () => {
       todo_arr = todo_arr.filter((todo) => todo.title !== todo_item.title);
 
       updateDom();
     });
 
-    li.append(label);
-    li.append(btnRemove);
-    label.prepend(input);
     todoList.append(li);
   });
 };
@@ -69,10 +58,10 @@ updateDom();
 btnAddTask.disabled = true;
 
 inputEl.addEventListener("input", () => {
-  btnAddTask.disabled = false;
+  btnAddTask.disabled = inputEl.value.trim() === "";
 });
 
-addNewTodo = (e) => {
+const addNewTodo = (e) => {
   e.preventDefault();
 
   let newTodo = {
