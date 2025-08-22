@@ -10,23 +10,23 @@
 
   <body>
     <header>
-      <h1 class="heading-1">Todo App</h1>
+      <h1 class="main-heading">Todo App</h1>
     </header>
     <form class="form-container">
-      <div class="add_task">
+      <div class="add-task">
         <input type="text" placeholder="Add your task..." class="todo-input" />
-        <button class="js-add-task clickable btns">Add task</button>
+        <button class="btn-add-task btns">Add task</button>
       </div>
 
       <ol class="todo-list"></ol>
 
       <template class="js-todo-template">
         <li class="todo-list-item">
-          <label class="clickable">
+          <label class="task-label">
             <input type="checkbox" />
             <span class="todo-text"></span>
           </label>
-          <button class="btn-remove clickable btns">Remove</button>
+          <button class="btn-remove btns">Remove</button>
         </li>
       </template>
     </form>

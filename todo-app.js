@@ -1,22 +1,22 @@
-const btnAddTask = document.querySelector(".js-add-task");
+const btnAddTaskEl = document.querySelector(".btn-add-task");
 const inputEl = document.querySelector(".todo-input");
-const todoList = document.querySelector(".todo-list");
-const todoTemplate = document.querySelector(".js-todo-template");
+const todoListEl = document.querySelector(".todo-list");
+const todoTemplateEl = document.querySelector(".js-todo-template");
 
-let todo_arr = [];
+let todos = [];
 
 const updateDom = () => {
-  todoList.innerHTML = "";
-  if (todo_arr.length === 0) {
+  todoListEl.innerHTML = "";
+  if (todos.length === 0) {
     const div = document.createElement("div");
     div.textContent = "PLEASE ADD TASKS!";
     div.className = "add-tasks";
 
-    todoList.append(div);
+    todoListEl.append(div);
   }
 
-  todo_arr.forEach((todo_item) => {
-    const li = todoTemplate.content.cloneNode(true);
+  todos.forEach((todo_item) => {
+    const li = todoTemplateEl.content.cloneNode(true);
 
     const checkbox = li.querySelector("input[type='checkbox']");
     const todoText = li.querySelector(".todo-text");
@@ -31,7 +31,7 @@ const updateDom = () => {
 
     checkbox.addEventListener("change", (e) => {
       if (e.target.type === "checkbox") {
-        const todoToUpdate = todo_arr.find(
+        const todoToUpdate = todos.find(
           (item) => item.title === todo_item.title
         );
         todoToUpdate.isCompleted = !todoToUpdate.isCompleted;
@@ -44,36 +44,41 @@ const updateDom = () => {
     });
 
     removeBtn.addEventListener("click", () => {
-      todo_arr = todo_arr.filter((todo) => todo.title !== todo_item.title);
+      todos = todos.filter((todo) => todo.id !== todo_item.id);
 
       updateDom();
     });
 
-    todoList.append(li);
+    todoListEl.append(li);
   });
 };
 
-updateDom();
-
-btnAddTask.disabled = true;
-
-inputEl.addEventListener("input", () => {
-  btnAddTask.disabled = inputEl.value.trim() === "";
-});
+const generateId = () => {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+};
 
 const addNewTodo = (e) => {
   e.preventDefault();
 
   let newTodo = {
+    id: generateId(),
     title: inputEl.value,
     isCompleted: false,
   };
-  todo_arr.unshift(newTodo);
+  todos.unshift(newTodo);
 
   inputEl.value = "";
 
   updateDom();
-  btnAddTask.disabled = true;
+  btnAddTaskEl.disabled = true;
 };
 
-btnAddTask.addEventListener("click", addNewTodo);
+updateDom();
+
+btnAddTaskEl.disabled = true;
+
+inputEl.addEventListener("input", () => {
+  btnAddTaskEl.disabled = inputEl.value.trim() === "";
+});
+
+btnAddTaskEl.addEventListener("click", addNewTodo);

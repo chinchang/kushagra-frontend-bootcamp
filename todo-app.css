@@ -1,12 +1,12 @@
 :root {
-  --purple-color: rgba(112, 35, 112, 1);
-  --gray-color: rgb(120, 120, 120);
-  --light-purple-color: rgba(238, 212, 238, 1);
+  --text-color: rgba(112, 35, 112, 1);
+  --border-color: rgb(120, 120, 120);
+  --bg-color: rgba(238, 212, 238, 1);
 }
 
-.heading-1 {
+.main-heading {
   text-align: center;
-  color: var(--purple-color);
+  color: var(--text-color);
 }
 
 .form-container {
@@ -17,29 +17,27 @@
 }
 
 .todo-input {
-  outline: none;
   padding-inline: 0.5rem;
   padding-block: 0.3rem;
 }
 
 .todo-input:focus {
-  border: 2px solid var(--purple-color);
-  border-radius: 2px;
+  outline: 2px solid var(--text-color);
 }
 
-.add_task {
+.add-task {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
 .todo-list {
-  min-inline-size: 40vw;
+  inline-size: 40vw;
   padding: 0;
 }
 
 .todo-list-item {
-  border: 1px solid var(--gray-color);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   margin-bottom: 1rem;
   padding-inline: 0.5rem;
@@ -52,11 +50,15 @@
 }
 
 .todo-list-item:hover {
-  border: 1px solid var(--purple-color);
-  background-color: var(--light-purple-color);
+  border: 1px solid var(--text-color);
+  background-color: var(--bg-color);
 }
 
-.clickable {
+button {
+  cursor: pointer;
+}
+
+.task-label {
   cursor: pointer;
 }
 
@@ -73,7 +75,7 @@
 }
 
 .add-tasks {
-  color: var(--purple-color);
+  color: var(--text-color);
   text-align: center;
 }
 
